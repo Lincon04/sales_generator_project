@@ -65,10 +65,10 @@ class GeneratorSales:
 
 
 generator = GeneratorSales('data_base_random.json')
-reports = open('relatorio-gerado.csv', 'w')
+reports = open('../temp/sales-files.csv', 'w')
 reports.write('pv;data_venda;nsu;rv_number;valor_bruto;desconto;valor_liquido;modalidade;meio_de_pagamento'
-                ';maquininha;quantidade_parcelas;parcela;data_recebimento\n')
-for x in range(100):
+              ';maquininha;quantidade_parcelas;parcela;data_recebimento\n')
+for x in range(1200):
     generator.generate_row()
     reports.write(generator.__str__())
-    print(generator)
+    # print(generator)
